@@ -39,13 +39,13 @@ class PaymentControllerTest extends AbstractHttpControllerTestCase
     //     $this->assertMatchedRouteName('home');
     // }
 
-    // public function testIndexActionForUnAuthorisedUsers()
-    // {
-    //     $this->dispatch('/payment', 'GET');
-    //     $this->assertModuleName('payment');
-    //     $this->assertControllerClass('PaymentController');
-    //     $this->assertMatchedRouteName('login');
-    // }
+    public function testIndexActionForUnAuthorisedUsers()
+    {
+        $this->dispatch('/payment', 'GET');
+        $this->assertModuleName('payment');
+        $this->assertControllerClass('PaymentController');
+        $this->assertMatchedRouteName('payment');
+    }
 
     // public function testInvalidRouteDoesNotCrash()
     // {
