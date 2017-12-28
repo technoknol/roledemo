@@ -45,11 +45,26 @@ class PaymentControllerTest extends AbstractHttpControllerTestCase
         $this->assertModuleName('payment');
         $this->assertControllerClass('PaymentController');
         $this->assertMatchedRouteName('payment');
+        $this->assertRedirectTo('/login?redirectUrl=/payment');
     }
 
-    // public function testInvalidRouteDoesNotCrash()
-    // {
-    //     $this->dispatch('/invalid/route', 'GET');
-    //     $this->assertResponseStatusCode(404);
+    public function testInvalidRouteDoesNotCrash()
+    {
+        $this->dispatch('/invalid/route', 'GET');
+        $this->assertResponseStatusCode(404);
+    }
+
+    // public function testLoginFunctionality() {
+    //     // 'POST', ['argument' => 'value']
+    //     $this->dispatch('/login', 'POST',
+    //     [
+    //         'email'=>'admin@example.com',
+    //         'password'=>'Secur1ty',
+    //         // remember_me:0
+    //         'redirect_url'=>'/payment'
+    //     ]);
+    //     $this->assertResponseStatusCode(200);
+    //         print_r($this->getResponse());
+    //     print_r(get_class_methods($this));
     // }
 }
