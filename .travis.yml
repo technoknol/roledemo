@@ -1,0 +1,16 @@
+language: php
+php:
+  - '5.6'
+  - '7.0'
+script:
+  - ./vendor/bin/phpunit
+
+# Tell Travis CI to monitor only 'master' branch
+branches:
+  only: master
+
+# You can delete cache using travis-ci web interface
+cache:
+  directories:
+  - vendor
+  - $HOME/.cache/composer
