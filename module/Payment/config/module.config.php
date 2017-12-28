@@ -9,7 +9,7 @@ use Zend\ServiceManager\Factory\InvokableFactory;
 return [
     'router' => [
         'routes' => [
-            'login' => [
+            'payment' => [
                 'type' => Literal::class,
                 'options' => [
                     'route'    => '/payment',
@@ -40,7 +40,7 @@ return [
         'controllers' => [
             Controller\PaymentController::class => [
                 // Allow anyone to visit "index" and "about" actions
-                ['actions' => ['index', 'about'], 'allow' => '*'],
+                ['actions' => ['index'], 'allow' => '@'],
                 // Allow authorized users to visit "settings" action
                 //['actions' => ['settings'], 'allow' => '@']
             ],
