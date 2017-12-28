@@ -1,5 +1,7 @@
 [![Build Status](https://travis-ci.org/technoknol/roledemo.svg?branch=master)](https://travis-ci.org/technoknol/roledemo)
 
+[![CircleCI](https://circleci.com/gh/technoknol/roledemo/tree/master.svg?style=svg)](https://circleci.com/gh/technoknol/roledemo/tree/master)
+
 Role Demo Sample
 ==================================================
 
